@@ -1,0 +1,17 @@
+Static checks include:
+  > terraform fmt
+      - formats terraform files
+  > terraform validate
+      - checks if configurations using/setting all required input variables, etc
+  > terraform plan
+      - current state to desired state checks
+  > custom validation rules
+
+External checks include:
+  > tflint
+  > checkov, tfsec, terrascan, terraform-compliance, snyk
+
+Manual testing include:
+  > terraform init, plan, apply, destroy
+
+Automate the above with scripts (i.e. Bash script)
