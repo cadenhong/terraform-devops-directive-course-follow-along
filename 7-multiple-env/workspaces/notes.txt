@@ -1,0 +1,37 @@
+Isolated environments provisioned using the same codebase via Terraform workspace features
+
+...
+
+
+`terraform init`
+  > initialize modules and backend/setup
+
+`terraform workspace list`
+  > lists all the workspaces that currently exists
+
+`terraform workspace new production`
+  > creates and switches to a new workspace called production
+
+`terraform apply`
+  > creates resources in the production workspace
+
+
+...
+
+
+`terraform workspace new staging`
+  > creates and switches to a new workspace called staging
+
+`terraform apply`
+  > creates resources in the staging workspace
+
+
+...
+
+
+`terraform workspace select production`
+  > switches to the production workspace
+
+`terraform destroy`
+  > destroy resources in the production workspace only
+  > need to run this in staging environment as well

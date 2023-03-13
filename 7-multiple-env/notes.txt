@@ -1,0 +1,18 @@
+Managing Multiple Environments
+1. Workspaces - multiple named sections within a single backend; similar to Git branches
+    > Pros:
+        - easy to get started
+        - convenient terraform.workspace expression
+        - minimizes code duplication
+    > Cons: 
+        - prone to human error
+        - state stored within same backend (difficult to isolate permissioning - if someone has access to dev, they also have access to prod)
+        - codebase doesn't ambiguously show deployment configurations; hard to tell what's deployed where
+2. File Structure - directory layout that provides separation and modules that provides reuses
+    > Pros:
+        - isolation of backend (improved security, decrease for human error)
+        - codebase fully represents deployed state
+    > Cons:
+        - multiple `terraform apply` required to provision environments
+        - more code duplication
+            - *** this can be minimized with modules ***
