@@ -1,0 +1,4 @@
+First, go into the global directory and create the shared resource that will be used across both production and staging environments
+Once completed, cd into each production and staging directories and perform `terraform init` and `apply` to provision each environment infrastructure
+
+Easier to see the codebase and what's deployed in the folders than workspace option
