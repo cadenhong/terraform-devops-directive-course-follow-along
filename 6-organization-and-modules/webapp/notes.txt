@@ -1,0 +1,13 @@
+Using the main.tf file in this directory to call on all modules created in../webapp-module directory
+
+Refer to the module block in main.tf calling the local module folder:
+
+  module "webapp1" {
+    source = "../webapp-module"
+  }
+
+* Note that there's no terraform.tfvars file *
+Instead, the variables are defined inside the module block.
+This can be useful if weare creating the same set of resources via module but need to specify slightly different variables;
+For example, creating resources of a module twice - once for production env and once for development env
+This will essentially replicate the same infrastructure and provision same resources but can now be used for different environments.
